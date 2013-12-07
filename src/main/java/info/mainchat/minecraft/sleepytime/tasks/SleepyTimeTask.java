@@ -1,24 +1,23 @@
+/*
+ * ©2013 Omar Stefan Evans <omar@evansbros.info>
+ *
+ * Permission is hereby granted to all persons to use and redistribute this software
+ * for any purpose, with or without modification, provided that this notice appears
+ * in all copies or substantial portions of the software.
+ */
+
 package info.mainchat.minecraft.sleepytime.tasks;
 
 import info.mainchat.minecraft.sleepytime.SleepyTime;
-import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
-
-/**
- * Author: Omar Stefan Evans <omar@mainchat.info>
- * Created on: 2013-05-26
- * Description:
- * Purpose:
- */
 
 public abstract class SleepyTimeTask extends BukkitRunnable {
     protected final SleepyTime plugin;
-    protected final Player player;
+    protected final String playerName;
 
-    public SleepyTimeTask(SleepyTime plugin, Player player)
-    {
+    public SleepyTimeTask(SleepyTime plugin, String playerName) {
         this.plugin = plugin;
-        this.player = player;
+        this.playerName = playerName;
     }
 
 }
